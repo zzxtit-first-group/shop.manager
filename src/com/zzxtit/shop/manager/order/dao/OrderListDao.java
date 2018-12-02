@@ -15,7 +15,7 @@ public class OrderListDao {
 	
 	public List<Order> getOrderList(){
 		String sql ="select order_id orderId, order_time orderTime, is_pay isPay, is_send isSend, "
-					+"is_receive isReceive, is_comment isComment, is_del isDel, user_id userId from t_order";
+					+"is_receive isReceive, is_comment isComment, is_del isDel, user_id userId from orderinfo";
 		try {
 			return qr.query(sql, new BeanListHandler<Order>(Order.class));
 		} catch (SQLException e) {
