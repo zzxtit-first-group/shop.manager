@@ -94,6 +94,7 @@ $(document).ready(function(){
 			        <th>付款情况</th>
 			        <th>发货情况</th>
 			        <th>用户ID</th>
+					<th>操作</th>
 		        </tr>
 	        </thead>
 	        <tbody id="tfbody">
@@ -105,6 +106,7 @@ $(document).ready(function(){
 					        <td>${order.isPay==1?"已付款":"待付款" }</td>
 					        <td>${order.isSend==1?"已发货":"待发货" }</td>
 					        <td>${order.userId }</td>
+							<td><a href="${ctxPath }/sendOrder?orderId=${order.orderId }">发货</a></td>
 				        </tr> 
 	        		</c:forEach>
 	        	</c:if>
